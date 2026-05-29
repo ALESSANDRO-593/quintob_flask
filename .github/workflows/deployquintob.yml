@@ -26,7 +26,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: construir la imagen de Docker
-        run: docker build -t ghcr.io/ALESSANDRO-593/holaflask:1.0.0 .
+        run: docker build -t ghcr.io/alessandro-593/holaflask:1.0.0 .
 
       - name: Login to GitHub Container Registry
         run: echo "${{ secrets.TOKEN_WR }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
